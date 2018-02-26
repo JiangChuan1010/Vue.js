@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+
+    <body>
+        <div id="first">
+           <p v-if="me"> mt love me </p>
+           <p v-if="mt"> i love mt </p>
+           <h1 v-if="age >= 25">Age: {{ age }}</h1>
+           <h2 v-if="name.indexOf('jack') >= 0">Name: {{ name }}</h2>
+        </div>
+    </body>
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#app',
+            data: {
+                me: true,
+                mt: false,
+                age: 28,
+                name: 'mutou'
+            }
+        })
+    </script>
+</html>
