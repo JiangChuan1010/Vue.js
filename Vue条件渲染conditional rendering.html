@@ -7,10 +7,17 @@
 
     <body>
         <div id="first">
+           <!--v-if条件渲染是插入或删除了dom-->
            <p v-if="me"> mt love me </p>
            <p v-if="mt"> i love mt </p>
            <h1 v-if="age >= 25">Age: {{ age }}</h1>
            <h2 v-if="name.indexOf('jack') >= 0">Name: {{ name }}</h2>
+           <h2 v-else>Name: {{ name }}</h2>
+           <!--v-show条件渲染只是修改了css的style属性-->
+           <p v-show="me"> mt love me </p>
+           <p v-show="mt"> i love mt </p>
+           <h1 v-else>Sex: {{ sex }}</h1>
+           <!--v-else必须在if或show之后，否则它无效-->
         </div>
     </body>
     <script src="js/vue.js"></script>
@@ -21,7 +28,8 @@
                 me: true,
                 mt: false,
                 age: 28,
-                name: 'mutou'
+                name: 'mutou',
+                sex: 'Male'
             }
         })
     </script>
