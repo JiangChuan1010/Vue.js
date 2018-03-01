@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <div id="mt">
+           <div v-bind:style="{ color: activeColor, fontSize: fontSize + 'px' }"></div>
+           <!--<div v-bind:style="styleObject"></div>-->
+           <!--多个特定样式-->
+           <!--<div v-bind:style="[baseStyles, overridingStyles]">-->
+        </div>
+    </body>
+    <script src="js/vue.js"></script>
+    <script>
+        var vm = new Vue({
+            el: '#mt',
+            data: {
+                activeColor: 'red',
+                fontSize: 30
+            }
+          //  data: {
+          //    styleObject: {
+          //      color: 'red',
+          //      fontSize: '13px'
+          //     }
+          //  }
+        })
+    </script>
+    
+</html>
