@@ -6,9 +6,9 @@
     </head>
     <body>
         <ul id="example-2">
-  <li v-for="(item, index) in items">
+		<li v-for="(item, index) in items">
     {{ parentMessage }} - {{ index }} - {{ item.message }}
-    <button @click="removeTodo(items,index)">Delete</button>
+			<button @click="removeTodo(items,index)">Delete</button>
   </li>
 </ul>
     </body>
@@ -22,7 +22,7 @@
       { message: 'Foo' },
       { message: 'Bar' }
     ]
-  }，
+  },
   methods: {
 			removeTodo: function(items, index) {
 				items.splice(index, 1);
