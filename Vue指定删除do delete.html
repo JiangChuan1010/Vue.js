@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <ul id="example-2">
+  <li v-for="(item, index) in items">
+    {{ parentMessage }} - {{ index }} - {{ item.message }}
+    <button @click="removeTodo(items,index)">Delete</button>
+  </li>
+</ul>
+    </body>
+    <script src="js/vue.js"></script>
+    <script>
+       var example2 = new Vue({
+  el: '#example-2',
+  data: {
+    parentMessage: 'Parent',
+    items: [
+      { message: 'Foo' },
+      { message: 'Bar' }
+    ]
+  }，
+  methods: {
+			removeTodo: function(items, index) {
+				items.splice(index, 1);
+			},
+		},
+})
+    </script>
+    
+</html>
